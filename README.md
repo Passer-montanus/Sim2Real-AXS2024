@@ -1,6 +1,6 @@
 # Sim2Real-AXS2024
-Operation instructions and some necessary instructions for client-side docker
-[Docker Guild in English](./sim2real-install-guide.md)
+用户端docker操作指南及必要说明
+[Operation instructions and some necessary instructions for client-side docker in English](./sim2real-install-guide.md)
 
 
 
