@@ -5,7 +5,7 @@ This guide details the steps to pull, setup, and run the AUSIM Docker container 
 
 ## 1. Creating the Container
 
-Ensure the image tag matches the latest version, currently `v1.1`:
+Ensure the image tag matches the latest version, currently `v1.2`:
 
 ```bash
 sudo docker run -it --name ausim --network=host \
@@ -16,7 +16,7 @@ sudo docker run -it --name ausim --network=host \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
     -v $HOME/Desktop/shared:/shared \
-    littledt/icra2024-sim2real-axs-ausim:v1.1 \
+    littledt/icra2024-sim2real-axs-ausim:v1.2 \
 /bin/bash
 ```
 
