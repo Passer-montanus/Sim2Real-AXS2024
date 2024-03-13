@@ -20,10 +20,10 @@ sudo chmod a+x scripts/*
 ```
 ./scripts/run_ausim.sh
 ```
-注：需要确保run_ausim.sh中镜像的标签与最新版本保持一致，目前为`v1.1`
+注：需要确保run_ausim.sh中镜像的标签与最新版本保持一致，目前为`v1.2`
 
 ### 1.2 利用命令行创建容器
-请确保镜像的标签与最新版本保持一致，目前为`v1.1`:
+请确保镜像的标签与最新版本保持一致，目前为`v1.2`:
 
 ```bash
 sudo docker run -it --name ausim --network=host \
@@ -34,7 +34,7 @@ sudo docker run -it --name ausim --network=host \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
     -v $HOME/Desktop/shared:/shared \
-    littledt/icra2024-sim2real-axs-ausim:v1.1 \
+    littledt/icra2024-sim2real-axs-ausim:v1.2 \
 /bin/bash
 ```
 
