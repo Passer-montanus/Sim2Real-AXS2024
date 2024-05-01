@@ -20,10 +20,10 @@ sudo chmod a+x scripts/*
 ```
 ./scripts/run_ausim.sh
 ```
-注：需要确保run_ausim.sh中镜像的标签与最新版本保持一致，目前为`v1.2`
+注：需要确保run_ausim.sh中镜像的标签与最新版本保持一致，目前为`v2.0`
 
 ### 1.2 利用命令行创建容器
-请确保镜像的标签与最新版本保持一致，目前为`v1.2`:
+请确保镜像的标签与最新版本保持一致，目前为`v2.0`:
 
 ```bash
 sudo docker run -it --name ausim --network=host \
@@ -34,7 +34,7 @@ sudo docker run -it --name ausim --network=host \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
     -v $HOME/Desktop/shared:/shared \
-    littledt/icra2024-sim2real-axs-ausim:v1.2 \
+    littledt/icra2024-sim2real-axs-ausim:v2.0 \
 /bin/bash
 ```
 
@@ -79,7 +79,7 @@ roslaunch hdl_localization hdl_localization.launch
 在ausim容器的conda基线环境下在终端执行：
 
 ```bash
-python /root /Workspace/AXS_baseline/ICRA2024-Sim2Real-AXS/src/airbot/Ausim/ros_base_control.py
+python /root/Workspace/AXS_baseline/ICRA2024-Sim2Real-AXS/src/airbot/Ausim/ros_base_control.py
 ```
 
 ## 6. 启动主程序AXS2024_Ausim.py
