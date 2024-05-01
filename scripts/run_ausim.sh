@@ -8,5 +8,5 @@ sudo docker run -it --name ausim --network=host \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
     -v $HOME/Desktop/shared:/shared \
-    littledt/icra2024-sim2real-axs-ausim:v1.2 \
+    littledt/icra2024-sim2real-axs-ausim:v2.0 \
     /bin/bash
