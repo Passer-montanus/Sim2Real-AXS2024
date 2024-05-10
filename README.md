@@ -17,21 +17,21 @@ $ 在此处键入Access Tokens，已通过邮箱提供。
 ### 2.1 使用脚本文件创建并执行容器
 首先确保scripts文件拥有权限：
 ```
-$ sudo chmod a+x scripts/*
+sudo chmod a+x scripts/*
 ```
 运行 run_ausim.sh 创建ausim用户容器
 ```
-$ ./scripts/run_ausim.sh
+./scripts/run_ausim.sh
 ```
 注：需要确保run_ausim.sh中镜像的标签与最新版本保持一致，目前为`v3`
 
 容器创建完毕后，可通过执行脚本启动容器
 ```
-$ ./scripts/exec_ausim.sh
+./scripts/exec_ausim.sh
 ```
 注：环境位于baseline的conda虚拟环境中，若未正常激活请手动激活：
 ```
-$ conda activate baseline
+conda activate baseline
 ```
 
 ### 2.2 利用命令行创建并执行容器
@@ -56,7 +56,7 @@ sudo docker exec -it ausim /bin/bash
 ```
 注：环境位于baseline的conda虚拟环境中，若未正常激活请手动激活：
 ```
-$ conda activate baseline
+conda activate baseline
 ```
 
 ## 3. 实机操作步骤说明
@@ -82,7 +82,7 @@ $ sudo kill -9 yyyy
 确保位于前面创建的 "ausim:v3" 容器中的baseline虚拟环境中
 在终端中执行：
 ```bash
-$ roscore
+roscore
 ```
 注:为了避免问题，建议不使用&后台运行；若需要终止运行后台任务，需手动查询PID并终止。
 
