@@ -130,7 +130,7 @@ python /root/Workspace/AXS_baseline/ICRA2024-Sim2Real-AXS/src/airbot/Ausim/AXS20
 
 ### 4.1 潜在问题
 如果出现下述情况，无法正常执行策略文件
-(assets/error1.png)
+<!--assets/error1.png -->
 请按照3.1以及3.2重启并运行
 
 当执行完AXS2024_Ausim_Test1.py后，若程序仍不停止，需要手动终止进程，关闭roscore的方法一致，但需要根据出问题的程序类型选择kill对应的程序.
