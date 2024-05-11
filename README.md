@@ -85,7 +85,7 @@ $ sudo kill -9 yyyy
 ```
 
 ### 3.2 在baseline用户容器中启用roscore
-确保位于前面创建的 "ausim:v3" 容器中的baseline虚拟环境中
+确保位于前面创建的 "ausim:v3.2" 容器中的baseline虚拟环境中
 在终端中执行：
 ```bash
 roscore
@@ -96,7 +96,7 @@ roscore
 ## 3.3 启动实车
 ## 3.4 启动hdl_localization
 
-确保位于前面创建的 "ausim:v3" 容器中的baseline虚拟环境中,在终端执行：
+确保位于前面创建的 "ausim:v3.2" 容器中的baseline虚拟环境中,在终端执行：
 
 ```bash
 roslaunch hdl_localization hdl_localization.launch
@@ -130,7 +130,7 @@ python /root/Workspace/AXS_baseline/ICRA2024-Sim2Real-AXS/src/airbot/Ausim/AXS20
 
 ### 4.1 潜在问题
 如果出现下述情况，无法正常执行策略文件
-<!--assets/error1.png -->
+![Error Pic](assets/error1.png)
 请按照3.1以及3.2重启并运行
 
 当执行完AXS2024_Ausim_Test1.py后，若程序仍不停止，需要手动终止进程，关闭roscore的方法一致，但需要根据出问题的程序类型选择kill对应的程序.
