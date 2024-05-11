@@ -63,8 +63,9 @@ conda activate baseline
 经过调试确认，需要按照顺序执行以下步骤，造成不便，敬请谅解。
 前提条件：需要确认镜像版本，v3为未适配roscore版本，v3.2为最新适配roscore版本，但因测试时间有限存在不稳定的情况。
 
-！！！下文因镜像版本不同可能存在不同步骤
-！！！AXS2024_Ausim_Test1.py均需要严格按照以下步骤执行，v3.2内的AXS2024_Ausim_Test2.py不需要考虑roscore是否已开启。
+！！！下文因镜像版本不同可能存在不同步骤！！！ <br /> 
+
+AXS2024_Ausim_Test1.py均需要严格按照以下步骤执行，v3.2内的AXS2024_Ausim_Test2.py不需要考虑roscore是否已开启。
 
 roscore需要在baseline用户容器中启动
 
