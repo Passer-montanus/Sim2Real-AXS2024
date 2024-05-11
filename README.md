@@ -23,7 +23,7 @@ sudo chmod a+x scripts/*
 ```
 ./scripts/run_ausim.sh
 ```
-注：需要确保run_ausim.sh中镜像的标签与最新版本保持一致，目前为`v3`
+注：需要确保run_ausim.sh中镜像的标签与最新版本保持一致，目前为`v3.2`
 
 容器创建完毕后，可通过执行脚本启动容器
 ```
@@ -35,7 +35,7 @@ conda activate baseline
 ```
 
 ### 2.2 利用命令行创建并执行容器
-请确保镜像的标签与最新版本保持一致，目前为`v3`:
+请确保镜像的标签与最新版本保持一致，目前为`v3.2`:
 ```bash
 sudo docker run -it --name ausim --network=host \
     --gpus all \
@@ -45,7 +45,7 @@ sudo docker run -it --name ausim --network=host \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
     -v $HOME/Desktop/shared:/shared \
-    littledt/icra2024-sim2real-axs-ausim:v3 \
+    littledt/icra2024-sim2real-axs-ausim:v3.2 \
 /bin/bash
 ```
 创建完成后可以通过命令行启动容器：
@@ -61,7 +61,12 @@ conda activate baseline
 
 ## 3. 实机操作步骤说明
 经过调试确认，需要按照顺序执行以下步骤，造成不便，敬请谅解。
-前提条件：roscore需要在baseline用户容器中启动
+前提条件：需要确认镜像版本，v3为未适配roscore版本，v3.2为最新适配roscore版本，但因测试时间有限存在不稳定的情况。
+
+！！！下文因镜像版本不同可能存在不同步骤
+！！！AXS2024_Ausim_Test1.py均需要严格按照以下步骤执行，v3.2内的AXS2024_Ausim_Test2.py不需要考虑roscore是否已开启。
+
+roscore需要在baseline用户容器中启动
 
 ### 3.1 关闭roscore、rosmaster
 通过在终端使用Ctrl+C或执行以下命令行，终止已启用的roscore、rosmaster
